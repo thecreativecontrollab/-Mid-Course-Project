@@ -1,5 +1,12 @@
 import java.util.*;
-
+/**
+ *  Create a casino style game with a pair of dice and a player/shooter to roll
+ * @authors 
+ * Stephanie Tackett
+ * Travis Crawford
+ * version 1.0 
+ *
+ */
 public class PairOfDice {
 
 
