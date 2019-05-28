@@ -47,7 +47,9 @@ public class PairOfDice {
 		// Roll the dice for the first roll
 
 		Scanner input = new Scanner(System.in);
-
+		System.out.println("Please enter your name to continue");
+		String myname = input.nextLine();input.nextLine();
+		System.out.println("Thank You,  " + myname);
 		System.out.println("Press [Enter] to roll the dice: ");
 		input.nextLine();
 
