@@ -44,18 +44,23 @@ public class PairOfDice {
 
 
 	public static void startGame() {
-		// Roll the dice for the first roll
-
 		Scanner input = new Scanner(System.in);
 
+		// Roll the dice for the first roll
 		System.out.println("Press [Enter] to roll the dice: ");
 		input.nextLine();
 
+		// Created variables for roll 1 & 2 and roll total to store the Point
 		int roll1 = die1.roll();
 		int roll2 = die2.roll();
+		
+		// Adds roll1 & roll2 for a roll total
 		int rollTotal = roll1 + roll2;
+		
 		System.out.println("You rolled a " + roll1 + " and a " + roll2);
 		System.out.println("for a total of " + rollTotal);
+		
+		
 		//Find out if they won?
 		if (rollTotal == 7 || rollTotal == 11)
 		{
@@ -79,13 +84,14 @@ public class PairOfDice {
 			
 			while(keepPlaying) {
 				System.out.println("Roll Again: ");
+				 input.nextLine();
 				
 
 			// Did they win? (Match the point)
 			if (rollTotal == point)
 			{
 				System.out.println("You matched your point. You win!");
-				keepPlaying = false; // loop can stop now.
+				startGame();
 			}
 			// Did they lose? (Roll a 7)
 			else if (rollTotal == 7);
